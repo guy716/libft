@@ -1,7 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gil <guy@42.fr>                            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/06/30 01:58:37 by gil               #+#    #+#             */
+/*   Updated: 2020/06/30 01:58:38 by gil              ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <stdlib.h>
 #include <stdio.h>
 #include <libft.h>
-// can just add start to len then compare
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {

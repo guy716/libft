@@ -1,10 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gil <guy@42.fr>                            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/06/30 01:22:49 by gil               #+#    #+#             */
+/*   Updated: 2020/06/30 02:00:50 by gil              ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-int		ft_atoi(char *str)
+int	ft_atoi(char *str)
 {
-	int i;
-	long value;
-	int negative;
+	int		i;
+	long	value;
+	int		negative;
 
 	i = 0;
 	value = 0;
@@ -32,4 +44,3 @@ int		ft_atoi(char *str)
 		value *= -1;
 	return (value);
 }
-

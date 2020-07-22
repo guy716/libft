@@ -1,25 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gil <guy@42.fr>                            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/06/30 01:56:56 by gil               #+#    #+#             */
-/*   Updated: 2020/06/30 01:57:19 by gil              ###   ########.fr       */
+/*   Created: 2020/06/30 02:50:26 by gil               #+#    #+#             */
+/*   Updated: 2020/07/22 20:03:49 by gil              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strrchr(const char *s, int c)
-{
-	int i;
+#include "libft.h"
 
-	i = 0;
-	while (s[i])
-		i++;
-	while (i > 0 && s[i] != (char)c)
-		i--;
-	if (s[i] == (char)c)
-		return ((char *)&s[i]);
-	return (0);
+void	ft_putstr_fd(char *s, int fd)
+{
+	if (s)
+	{
+		write(fd, s, ft_strlen(s));
+		ft_putchar_fd('\0', fd);
+	}
 }

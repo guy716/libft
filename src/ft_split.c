@@ -1,15 +1,28 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gil <guy@42.fr>                            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/06/30 01:51:57 by gil               #+#    #+#             */
+/*   Updated: 2020/06/30 02:14:23 by gil              ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <stdlib.h>
 #include <libft.h>
 #include <string.h>
 
-/* check behavior when c = '\0' */
+/*
+** check behavior when c = '\0'
+** counts the number of occurrences of c in s
+*/
 
-/* counts the number of occurrences of c in s
- */
-
-static int countsplits(char const *s, char c)
+static int	countsplits(char const *s, char c)
 {
 	int count;
+
 	count = 0;
 	if (s)
 		while (*s != '\0')
@@ -26,7 +39,7 @@ static int countsplits(char const *s, char c)
 	return (count);
 }
 
-char **ft_split(char const *s, char c)
+char		**ft_split(char const *s, char c)
 {
 	char	**arr;
 	char	*ptr_s;
@@ -38,10 +51,10 @@ char **ft_split(char const *s, char c)
 	nth_split = 0;
 	if (!s)
 		return (0);
-	splits = countsplits(s, c) ;
+	splits = countsplits(s, c);
 	arr = malloc(splits * sizeof(char *));
 	if (!arr)
-		return 0;
+		return (0);
 	while (nth_split < splits)
 	{
 		while (*ptr_s && *ptr_s == c)
@@ -52,7 +65,6 @@ char **ft_split(char const *s, char c)
 		arr[nth_split] = malloc(next_c + 1);
 		if (!arr[nth_split])
 			return (0);
-		// initially wrote ptr_s = memccpy(...), but it was returning a null pointer. :(
 		ft_memccpy(arr[nth_split], ptr_s, (int)c, next_c);
 		ptr_s = ptr_s + next_c;
 		arr[nth_split][next_c] = '\0';
@@ -60,4 +72,3 @@ char **ft_split(char const *s, char c)
 	}
 	return (arr);
 }
-
