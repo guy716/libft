@@ -6,7 +6,7 @@
 /*   By: gil <guy@42.fr>                            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/30 01:51:57 by gil               #+#    #+#             */
-/*   Updated: 2020/06/30 02:14:23 by gil              ###   ########.fr       */
+/*   Updated: 2020/07/22 23:03:41 by gil              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,18 +24,19 @@ static int	countsplits(char const *s, char c)
 	int count;
 
 	count = 0;
-	if (s)
-		while (*s != '\0')
+	if (!s)
+		return (0);
+	while (*s != '\0')
+	{
+		while (*s && *s == c)
+			s++;
+		if (*s && *s != c)
 		{
-			while (*s && *s == c)
+			while (*s && *s != c)
 				s++;
-			if (*s && *s != c)
-			{
-				while (*s && *s != c)
-					s++;
-				count++;
-			}
+			count++;
 		}
+	}
 	return (count);
 }
 
@@ -49,11 +50,8 @@ char		**ft_split(char const *s, char c)
 
 	ptr_s = (char *)s;
 	nth_split = 0;
-	if (!s)
-		return (0);
 	splits = countsplits(s, c);
-	arr = malloc(splits * sizeof(char *));
-	if (!arr)
+	if (!s || !(arr = malloc(splits * sizeof(char *))))
 		return (0);
 	while (nth_split < splits)
 	{
@@ -62,13 +60,11 @@ char		**ft_split(char const *s, char c)
 		next_c = 0;
 		while (ptr_s[next_c] && ptr_s[next_c] != c)
 			next_c++;
-		arr[nth_split] = malloc(next_c + 1);
-		if (!arr[nth_split])
+		if (!(arr[nth_split] = malloc(next_c + 1)))
 			return (0);
 		ft_memccpy(arr[nth_split], ptr_s, (int)c, next_c);
 		ptr_s = ptr_s + next_c;
-		arr[nth_split][next_c] = '\0';
-		nth_split++;
+		arr[nth_split++][next_c] = '\0';
 	}
 	return (arr);
 }
