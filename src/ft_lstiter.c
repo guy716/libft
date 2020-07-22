@@ -1,24 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gil <guy@42.fr>                            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/06/30 01:23:34 by gil               #+#    #+#             */
-/*   Updated: 2020/07/22 22:48:53 by gil              ###   ########.fr       */
+/*   Created: 2020/06/30 01:43:33 by gil               #+#    #+#             */
+/*   Updated: 2020/07/22 21:54:10 by gil              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-** not sure if we have to include
-** c>=65 && c<=90
-** c>=97 && c<=122
-*/
+#include <bonus.h>
+#include <stdio.h>
 
-int	ft_isprint(int c)
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	if (c >= 32 && c <= 126)
-		return (1);
-	return (0);
+	if (!f || !lst)
+		return ;
+	while (lst)
+	{
+		f(lst->content);
+		lst = lst->next;
+	}
 }

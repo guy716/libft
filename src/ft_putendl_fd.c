@@ -6,7 +6,7 @@
 /*   By: gil <guy@42.fr>                            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/30 02:55:37 by gil               #+#    #+#             */
-/*   Updated: 2020/07/22 20:06:40 by gil              ###   ########.fr       */
+/*   Updated: 2020/07/22 20:36:32 by gil              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,9 @@
 
 void	ft_putendl_fd(char *s, int fd)
 {
-	ft_putstr_fd(s, fd);
-	ft_putstr_fd("\n", fd);
+	if (s)
+	{
+		write(fd, s, ft_strlen(s));
+		ft_putchar_fd('\n', fd);
+	}
 }

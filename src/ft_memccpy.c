@@ -6,13 +6,13 @@
 /*   By: gil <guy@42.fr>                            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/30 02:09:06 by gil               #+#    #+#             */
-/*   Updated: 2020/06/30 02:09:14 by gil              ###   ########.fr       */
+/*   Updated: 2020/07/22 22:29:37 by gil              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-void	*ft_memccpy(void *restrict dst, const void *restrict src, int c, size_t n)
+void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 {
 	unsigned char		*d;
 	const unsigned char	*s;
