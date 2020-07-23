@@ -6,13 +6,13 @@
 /*   By: gil <guy@42.fr>                            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/22 23:06:51 by gil               #+#    #+#             */
-/*   Updated: 2020/07/22 23:14:21 by gil              ###   ########.fr       */
+/*   Updated: 2020/07/24 00:23:37 by gil              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef BONUS_H
 # define BONUS_H
-# include <stdlib.h>
+# include "libft.h"
 
 typedef struct s_list	t_list;
 

@@ -6,7 +6,7 @@
 /*   By: gil <guy@42.fr>                            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/30 02:52:53 by gil               #+#    #+#             */
-/*   Updated: 2020/07/22 15:44:04 by gil              ###   ########.fr       */
+/*   Updated: 2020/07/23 22:59:07 by gil              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,17 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	char	*s;
-
-	s = ft_itoa(n);
-	write(fd, s, ft_strlen(s));
-	free(s);
+	if (n < 0)
+	{
+		ft_putchar_fd('-', fd);
+		if (n == -2147483648)
+		{
+			ft_putchar_fd('2', fd);
+			n = -147483648;
+		}
+		n = -n;
+	}
+	if (n > 9)
+		ft_putnbr_fd(n / 10, fd);
+	ft_putchar_fd(n % 10 + 48, fd);
 }
