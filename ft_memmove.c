@@ -6,11 +6,11 @@
 /*   By: gil <guy@42.fr>                            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/30 02:04:16 by gil               #+#    #+#             */
-/*   Updated: 2020/06/30 02:04:18 by gil              ###   ########.fr       */
+/*   Updated: 2020/07/29 02:41:57 by gil              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {

@@ -6,12 +6,11 @@
 /*   By: gil <guy@42.fr>                            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/30 01:54:40 by gil               #+#    #+#             */
-/*   Updated: 2020/06/30 01:54:42 by gil              ###   ########.fr       */
+/*   Updated: 2020/07/29 02:47:46 by gil              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <libft.h>
+#include "libft.h"
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {

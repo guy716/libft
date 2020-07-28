@@ -6,12 +6,11 @@
 /*   By: gil <guy@42.fr>                            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/30 01:53:21 by gil               #+#    #+#             */
-/*   Updated: 2020/06/30 01:53:28 by gil              ###   ########.fr       */
+/*   Updated: 2020/07/29 02:48:07 by gil              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
-#include <stdlib.h>
+#include "libft.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {

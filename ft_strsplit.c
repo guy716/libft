@@ -6,12 +6,11 @@
 /*   By: gil <guy@42.fr>                            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/30 02:06:37 by gil               #+#    #+#             */
-/*   Updated: 2020/06/30 02:09:56 by gil              ###   ########.fr       */
+/*   Updated: 2020/07/29 02:45:30 by gil              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <libft.h>
+#include "libft.h"
 
 char	**ft_split0(char const *s, char c)
 {

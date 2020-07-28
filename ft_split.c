@@ -6,13 +6,11 @@
 /*   By: gil <guy@42.fr>                            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/30 01:51:57 by gil               #+#    #+#             */
-/*   Updated: 2020/07/22 23:03:41 by gil              ###   ########.fr       */
+/*   Updated: 2020/07/29 02:43:58 by gil              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <libft.h>
-#include <string.h>
+#include "libft.h"
 
 /*
 ** check behavior when c = '\0'
