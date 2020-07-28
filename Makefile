@@ -3,17 +3,17 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: guy <marvin@42.fr>                         +#+  +:+       +#+         #
+#    By: guy <guy@42.fr>                            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/09/19 00:19:01 by guy               #+#    #+#              #
-#    Updated: 2018/09/19 10:51:23 by guy              ###   ########.fr        #
+#    Updated: 2020/07/29 01:46:09 by gil              ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
-PATH_C = src/
-PATH_H = includes/
+PATH_C = ./
+PATH_H = ./
 CFLAGS = -Wall -Wextra -Werror
 
 
