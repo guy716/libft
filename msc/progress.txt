@@ -1,0 +1,44 @@
+Progress:
+[x] memset
+[x] bzero
+[x] memcpy
+[x] memccpy
+[x] memmove
+[x] memchr
+[x] memcmp 
+[x] strlen
+[x] strlcpy
+[x] strlcat
+[x] strchr
+[x] strrchr
+[x] strnstr
+[x] strncmp
+[x] atoi
+[x] isalpha
+[x] isdigit
+[x] isalnum
+[x] isascii
+[x] isprint
+[x] toupper
+[x] tolower
+[x] calloc
+[x] strdup
+------
+[x] substr
+[x] strjoin
+[x] strtrim
+[x] split
+[/] itoa
+[ ] strmapi
+------
+[ ] lstnew
+[ ] lstadd_front
+[ ] lstsize
+[ ] lstlast
+[ ] lstadd_back
+[ ] lstdelone
+[ ] lstclear
+[ ] lstiter
+[ ] lstlstmap
+
+
