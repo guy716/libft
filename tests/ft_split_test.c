@@ -1,32 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_split_test.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gil <guy@42.fr>                            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/06/30 01:56:08 by gil               #+#    #+#             */
-/*   Updated: 2020/07/30 15:33:20 by gil              ###   ########.fr       */
+/*   Created: 2020/07/30 15:37:26 by gil               #+#    #+#             */
+/*   Updated: 2020/07/30 15:48:26 by gil              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
-{
-	size_t i;
+//in progress
 
-	i = 0;
-	if (needle[i] == '\0')
-		return ((char*)haystack);
-	if (len <= 0)
-		return (NULL);
-	if (haystack[i] == '\0')
-		return ((void *)0);
-	while (haystack[i] == needle[i] && haystack[i] && i < len)
-		i++;
-	if (needle[i] == '\0')
-		return ((char *)haystack);
-	else
-		return (ft_strnstr(haystack + 1, needle, len - 1));
+int main(int argc, char *argv[])
+{
+	char **tokens = ft_split(argv[1], *(argv[2]+1));
+	printf("The result when we split [%s] by [%c] is:\n", argv[1], *(argv[2]+1));
+	while (token[] != NULL)
+	{
+		printf("%s\n", *token);
+	}
+	return 0;
 }
