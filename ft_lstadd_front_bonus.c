@@ -1,23 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
+/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gil <guy@42.fr>                            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/06/30 01:42:12 by gil               #+#    #+#             */
-/*   Updated: 2020/07/29 04:48:01 by gil              ###   ########.fr       */
+/*   Created: 2020/06/30 01:43:18 by gil               #+#    #+#             */
+/*   Updated: 2020/07/31 03:48:07 by gil              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "bonus.h"
+#include "libft.h"
 
-void	ft_lstadd_back(t_list **lst, t_list *new)
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
 	if (!*lst)
+	{
 		*lst = new;
-	else if (!(*lst)->next)
-		(*lst)->next = new;
-	else 
-		ft_lstadd_back(&(*lst)->next, new);
+		return ;
+	}
+	if (!new)
+		return ;
+	(*new).next = *lst;
+	*lst = new;
 }

@@ -6,11 +6,11 @@
 /*   By: gil <guy@42.fr>                            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/30 01:43:33 by gil               #+#    #+#             */
-/*   Updated: 2020/07/29 02:52:02 by gil              ###   ########.fr       */
+/*   Updated: 2020/07/31 03:53:07 by gil              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "bonus.h"
+#include "libft.h"
 
 /*
 ** I didn't really understand the instructions,...
@@ -32,11 +32,16 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	if (!curr)
 		return (NULL);
 	head = curr;
-	while (lst->next && curr)
+	while (lst->next)
 	{
 		lst = lst->next;
 		curr->next = ft_lstnew((*f)(lst->content));
 		curr = curr->next;
+		if (!curr)
+		{
+			ft_lstclear(&head, del);
+			return (NULL);
+		}
 	}
 	return (head);
 }

@@ -6,15 +6,15 @@
 /*   By: gil <guy@42.fr>                            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/30 01:43:46 by gil               #+#    #+#             */
-/*   Updated: 2020/07/29 02:50:38 by gil              ###   ########.fr       */
+/*   Updated: 2020/07/31 03:52:12 by gil              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "bonus.h"
+#include "libft.h"
 
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	if (lst)
+	if (del && lst)
 	{
 		del(lst->content);
 		free(lst);
