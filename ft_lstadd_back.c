@@ -6,7 +6,7 @@
 /*   By: gil <guy@42.fr>                            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/30 01:42:12 by gil               #+#    #+#             */
-/*   Updated: 2020/07/29 02:49:37 by gil              ###   ########.fr       */
+/*   Updated: 2020/07/29 04:48:01 by gil              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,9 @@
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	if (!*lst)
-	{
 		*lst = new;
-		return ;
-	}
-	while ((*lst)->next)
-		*lst = (*lst)->next;
-	(*lst)->next = new;
+	else if (!(*lst)->next)
+		(*lst)->next = new;
+	else 
+		ft_lstadd_back(&(*lst)->next, new);
 }
