@@ -6,7 +6,7 @@
 /*   By: gil <guy@42.fr>                            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/30 01:43:33 by gil               #+#    #+#             */
-/*   Updated: 2020/07/31 03:53:07 by gil              ###   ########.fr       */
+/*   Updated: 2020/07/31 05:58:00 by gil              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,6 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list *head;
 	t_list *curr;
 
-	if (!del)
-		del = NULL;
 	if (!f || !lst)
 		return (NULL);
 	curr = ft_lstnew((*f)(lst->content));
