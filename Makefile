@@ -6,7 +6,7 @@
 #    By: guy <guy@42.fr>                            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/09/19 00:19:01 by guy               #+#    #+#              #
-#    Updated: 2020/07/29 02:33:33 by gil              ###   ########.fr        #
+#    Updated: 2020/07/31 05:51:48 by gil              ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,8 +47,8 @@ SOURCES  =  ft_atoi.c      \
         	ft_strtrim.c    \
         	ft_substr.c     \
         	ft_tolower.c    \
-        	ft_toupper.c    
-S_BONUS  =  ft_lstadd_back.c    \
+        	ft_toupper.c
+S_BONUS  =  ft_lstadd_back.c  \
             ft_lstadd_front.c \
             ft_lstlast.c      \
             ft_lstnew.c       \
@@ -71,7 +71,7 @@ $(NAME): $(OBJECTS)
 	ranlib $(NAME)
 
 bonus: $(OBJECTS) $(O_BONUS)
-	ar -rc $(NAME) $(OBJECTS)
+	ar -rc $(NAME) $(OBJECTS) $(O_BONUS)
 	ranlib $(NAME)
 
 clean:
