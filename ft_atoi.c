@@ -6,7 +6,7 @@
 /*   By: gil <guy@42.fr>                            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/30 01:22:49 by gil               #+#    #+#             */
-/*   Updated: 2020/07/30 14:00:45 by gil              ###   ########.fr       */
+/*   Updated: 2020/08/03 18:01:05 by gil              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,15 +27,7 @@ int	ft_atoi(char *str)
 		if (str[i++] == '-')
 			negative = 1;
 	while ((str[i] >= '0') && (str[i] <= '9'))
-	{
 		value = value * 10 + (str[i++] - '0');
-		if (value < 0)
-		{
-			if (negative)
-				return (0);
-			return (-1);
-		}
-	}
 	if (negative)
 		value *= -1;
 	return ((int)value);

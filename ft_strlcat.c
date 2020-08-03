@@ -6,7 +6,7 @@
 /*   By: gil <guy@42.fr>                            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/30 01:53:56 by gil               #+#    #+#             */
-/*   Updated: 2020/06/30 02:14:04 by gil              ###   ########.fr       */
+/*   Updated: 2020/08/03 18:28:15 by gil              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,11 +28,7 @@ size_t	ft_strlcat(char *restrict dst, const char *restrict src, size_t dstsize)
 	if ((long)dstsize <= dstlen)
 		return (dstsize + ft_strlen(src));
 	while (*s && d < (dst + dstsize - 1))
-	{
-		*d = *s;
-		d++;
-		s++;
-	}
+		*d++ = *s++;
 	if (dstsize && (long)dstsize > dstlen)
 		*d = '\0';
 	return (dstlen + ft_strlen(src));

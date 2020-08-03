@@ -6,7 +6,7 @@
 /*   By: gil <guy@42.fr>                            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/30 01:38:26 by gil               #+#    #+#             */
-/*   Updated: 2020/07/29 02:39:10 by gil              ###   ########.fr       */
+/*   Updated: 2020/08/03 18:12:45 by gil              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@ static int	num_digits(int n)
 		return (1);
 	if (n < 0)
 	{
-		digits += 1;
 		num = -1 * (unsigned int)n;
+		digits++;
 	}
 	while (num > 0)
 	{
@@ -42,7 +42,7 @@ char		*ft_itoa(int n)
 
 	num = (unsigned int)n;
 	digits = num_digits(n);
-	str = malloc(digits + 1);
+	str = (char *)malloc(digits + 1);
 	if (!str)
 		return (0);
 	if (n == 0)
@@ -55,9 +55,8 @@ char		*ft_itoa(int n)
 	str[digits] = '\0';
 	while (num > 0)
 	{
-		str[digits - 1] = (char)(num % 10) + '0';
+		str[--digits] = (char)(num % 10) + '0';
 		num /= 10;
-		digits--;
 	}
 	return (str);
 }

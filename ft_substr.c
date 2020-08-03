@@ -6,7 +6,7 @@
 /*   By: gil <guy@42.fr>                            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/30 01:58:37 by gil               #+#    #+#             */
-/*   Updated: 2020/08/02 00:13:39 by gil              ###   ########.fr       */
+/*   Updated: 2020/08/03 18:38:10 by gil              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	slen = (size_t)ft_strlen(s);
 	if (len > slen)
 		len = slen;
-	if (!(sub = malloc(len + 1)))
+	if (!(sub = (char *)malloc(len + 1)))
 		return (NULL);
 	subptr = sub;
 	while (*s && (subptr - sub) < (long)len)

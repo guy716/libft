@@ -6,7 +6,7 @@
 /*   By: gil <guy@42.fr>                            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/30 01:55:36 by gil               #+#    #+#             */
-/*   Updated: 2020/07/29 02:45:57 by gil              ###   ########.fr       */
+/*   Updated: 2020/08/03 18:29:07 by gil              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 		return (0);
 	s_ptr = (char *)s;
 	s_len = ft_strlen(s);
-	out = malloc(s_len + 1);
+	out = (char *)malloc(s_len + 1);
 	if (!out)
 		return (0);
 	reps = 0;
