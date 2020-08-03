@@ -6,7 +6,7 @@
 /*   By: gil <guy@42.fr>                            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/30 02:04:16 by gil               #+#    #+#             */
-/*   Updated: 2020/07/29 04:03:41 by gil              ###   ########.fr       */
+/*   Updated: 2020/08/03 16:53:03 by gil              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,18 +24,10 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 		d = dst + len - 1;
 		s = src + len - 1;
 		while ((d != NULL || s != NULL) && d >= (const unsigned char *)dst)
-		{
-			*d = *(unsigned char *)s;
-			d--;
-			s--;
-		}
+			*d-- = *(unsigned char *)s--;
 		return (dst);
 	}
 	while ((d != NULL || s != NULL) && d < ((const unsigned char *)dst + len))
-	{
-		*d = *(unsigned char *)s;
-		d++;
-		s++;
-	}
+		*d++ = *(unsigned char *)s++;
 	return (dst);
 }
