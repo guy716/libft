@@ -6,13 +6,15 @@
 #    By: guy <guy@42.fr>                            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/09/19 00:19:01 by guy               #+#    #+#              #
-#    Updated: 2020/08/03 18:39:46 by gil              ###   ########.fr        #
+#    Updated: 2020/08/03 19:58:11 by gil              ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
 CFLAGS = -Wall -Wextra -Werror
+
+HEADERS = libft.h
 
 SOURCES  =  ft_atoi.c      \
         	ft_bzero.c      \
@@ -61,7 +63,7 @@ S_BONUS  =  ft_lstadd_back.c  \
 OBJECTS	= $(SOURCES:%.c=%.o)
 O_BONUS	= $(S_BONUS:%.c=%.o)
 
-%.o: %.c
+%.o: %.c $(HEADERS)
 	gcc $(CFLAGS) -c $< -o $@
 
 all: $(NAME)

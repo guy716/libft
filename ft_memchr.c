@@ -6,7 +6,7 @@
 /*   By: gil <guy@42.fr>                            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/30 01:47:03 by gil               #+#    #+#             */
-/*   Updated: 2020/06/30 01:47:16 by gil              ###   ########.fr       */
+/*   Updated: 2020/08/03 19:47:03 by gil              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	char	*ptr;
+	unsigned char	*ptr;
 
-	ptr = (char *)s;
+	ptr = (unsigned char *)s;
 	while (ptr != s + n)
 	{
-		if (*ptr == (char)c)
+		if (*ptr == (unsigned char)c)
 			return (ptr);
 		ptr++;
 	}

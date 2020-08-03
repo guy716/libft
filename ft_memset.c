@@ -6,7 +6,7 @@
 /*   By: guy <guy@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/12 00:22:34 by guy               #+#    #+#             */
-/*   Updated: 2020/08/03 18:26:37 by gil              ###   ########.fr       */
+/*   Updated: 2020/08/03 19:41:37 by gil              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 void	*ft_memset(void *b, int c, size_t len)
 {
-	char	*ptr;
+	unsigned char	*ptr;
 
-	ptr = b;
-	while (ptr != ((char *)b + len))
+	ptr = (unsigned char *)b;
+	while (ptr != ((unsigned char *)b + len))
 		*ptr++ = c;
 	return (b);
 }
