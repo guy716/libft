@@ -6,13 +6,13 @@
 /*   By: gil <guy@42.fr>                            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/30 01:53:56 by gil               #+#    #+#             */
-/*   Updated: 2020/08/03 19:27:24 by gil              ###   ########.fr       */
+/*   Updated: 2020/08/03 21:52:12 by gil              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *restrict dst, const char *restrict src, size_t dstsize)
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
 	char *d;
 	char *s;

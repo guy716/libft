@@ -6,7 +6,7 @@
 /*   By: gil <guy@42.fr>                            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/30 01:54:40 by gil               #+#    #+#             */
-/*   Updated: 2020/07/29 02:47:46 by gil              ###   ########.fr       */
+/*   Updated: 2020/08/03 22:58:04 by gil              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
-	int i;
+	size_t i;
 
 	i = 0;
 	if (!dst || !src)
 		return (0);
-	while (src[i] && i < ((int)dstsize - 1))
+	while (i + 1 < dstsize)
 	{
 		dst[i] = src[i];
 		i++;

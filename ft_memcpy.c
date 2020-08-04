@@ -6,22 +6,22 @@
 /*   By: gil <guy@42.fr>                            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/30 01:46:14 by gil               #+#    #+#             */
-/*   Updated: 2020/08/03 18:25:35 by gil              ###   ########.fr       */
+/*   Updated: 2020/08/03 22:12:06 by gil              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	unsigned char		*d;
-	const unsigned char	*s;
+	unsigned char	*d;
+	unsigned char	*s;
 
-	d = dst;
-	s = src;
-	while ((d != NULL || s != NULL) && d < ((const unsigned char *)dst + n))
-		*d++ = *(unsigned char *)s++;
-	if (dst != NULL)
+	d = (unsigned char *)dst;
+	s = (unsigned char *)src;
+	if (dst == src)
 		return (dst);
-	return (0);
+	while (d < ((unsigned char *)dst + n))
+		*d++ = *(unsigned char *)s++;
+	return (dst);
 }
